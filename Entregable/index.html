@@ -1,25 +1,58 @@
-<!doctype html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Inventario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gestor de Inventario</h1>
+            <div class="dashboard">
+                <div class="card">
+                    <h3>Total Productos</h3>
+                    <p id="total-items">0</p>
+                </div>
+                <div class="card">
+                    <h3>Valor Total</h3>
+                    <p>$<span id="total-value">0.00</span></p>
+                </div>
+            </div>
+        </header>
 
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
+        <section class="add-product">
+            <h2>Agregar Nuevo Producto</h2>
+            <form id="inventory-form">
+                <input type="text" id="name" placeholder="Nombre del producto" required>
+                <input type="text" id="sku" placeholder="Código SKU" required>
+                <input type="number" id="quantity" placeholder="Cantidad" min="0" required>
+                <input type="number" id="price" placeholder="Precio Unitario" step="0.01" min="0" required>
+                <button type="submit">Agregar al Inventario</button>
+            </form>
+        </section>
 
-    </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">
-            You are using an <strong>outdated</strong> browser. Please
-            <a href="http://browsehappy.com/">upgrade your browser</a> to improve
-            your experience.
-            </p>
-        <![endif]-->
-
-
-    </body>
+        <section class="inventory-list">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>SKU</th>
+                            <th>Stock</th>
+                            <th>Precio</th>
+                            <th>Valor Total</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inventory-body">
+                        <!-- Las filas se inyectarán aquí mediante JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>
