@@ -1,0 +1,19 @@
+
+  .card-img-top {
+    height: 350px;
+
+  }
+
+  h2{
+    background-color: #6d0c2e;
+    color: white;
+    padding: 10px;
+    border-radius: 10px; 
+    text-align: center;
+  }
+
+  section h1{
+    color: #6d0c2e; 
+    text-align: center; 
+    padding: 15px;
+  }
