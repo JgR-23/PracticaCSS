@@ -1,0 +1,159 @@
+:root {
+  --guinda: #6b1e3f;
+  --guinda-osc: #511530;
+  --fondo: #f4f1f3;
+  --texto: #2b2b2b;
+  --borde: #cfc6cb;
+  --error: #b3261e;
+  --ok: #1e7a46;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.5;
+}
+
+.encabezado {
+  background: var(--guinda);
+  color: #fff;
+  padding: 1.25rem 1rem;
+  text-align: center;
+}
+.encabezado h1 { margin: 0; font-size: 1.6rem; }
+.encabezado p { margin: .25rem 0 0; opacity: .85; }
+
+.contenedor {
+  max-width: 1100px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
+  align-items: start;
+}
+
+.tarjeta {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+}
+.tarjeta h2 { margin-top: 0; color: var(--guinda); }
+.nota { color: #666; font-size: .9rem; margin-top: -.5rem; }
+
+/* ---------- Campos ---------- */
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1rem; }
+.campo { display: flex; flex-direction: column; margin-bottom: .6rem; min-width: 0; }
+.campo.ancho { grid-column: 1 / -1; }
+
+label { font-weight: 600; font-size: .95rem; margin-bottom: .3rem; }
+label.req::after { content: " *"; color: var(--error); }
+
+input, select, textarea {
+  font: inherit;
+  width: 100%;
+  padding: .55rem .7rem;
+  border: 1.5px solid var(--borde);
+  border-radius: 8px;
+  background: #fff;
+}
+textarea { resize: vertical; }
+input:focus, select:focus, textarea:focus {
+  outline: 3px solid rgba(107, 30, 63, .25);
+  border-color: var(--guinda);
+}
+
+.invalido { border-color: var(--error) !important; background: #fff6f5; }
+.valido { border-color: var(--ok); }
+
+.error {
+  color: var(--error);
+  font-size: .85rem;
+  margin: .3rem 0 0;
+  min-height: 1.3em;
+}
+.contador { text-align: right; font-size: .8rem; color: #666; }
+
+.vista-previa {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  margin-top: .4rem;
+  border-radius: 8px;
+  border: 1px solid var(--borde);
+}
+
+/* ---------- Mensajes ---------- */
+.resumen-errores {
+  background: #fdecea;
+  border: 1px solid var(--error);
+  color: var(--error);
+  padding: .7rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: .92rem;
+}
+.aviso {
+  background: #fff8e1;
+  border: 1px solid #f0d78a;
+  padding: .7rem 1rem;
+  border-radius: 8px;
+  font-size: .92rem;
+}
+.calculo {
+  background: #eef6ff;
+  border: 1px solid #b9d6f5;
+  border-radius: 8px;
+  padding: .6rem .9rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* ---------- Botones ---------- */
+.botones { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: .5rem; }
+button {
+  font: inherit;
+  font-weight: 600;
+  padding: .6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid var(--guinda);
+}
+.btn-primario { background: var(--guinda); color: #fff; }
+.btn-primario:hover:not(:disabled) { background: var(--guinda-osc); }
+.btn-primario:disabled { opacity: .6; cursor: wait; }
+.btn-secundario { background: #fff; color: var(--guinda); }
+.btn-secundario:hover { background: #f6eef2; }
+
+/* ---------- Resultado en pantalla ---------- */
+.resultado {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  border: 2px solid var(--ok);
+  border-radius: 10px;
+  background: #f2faf5;
+}
+.resultado::after { content: ""; display: block; clear: both; }
+.resultado h3 { margin: 0 0 .75rem; color: var(--ok); }
+.resultado img {
+  float: right;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  margin-left: 1rem;
+  border-radius: 8px;
+}
+.resultado dl { display: grid; grid-template-columns: auto 1fr; gap: .3rem .8rem; margin: 0; }
+.resultado dt { font-weight: 600; }
+.resultado dd { margin: 0; overflow-wrap: anywhere; }
+
+@media (max-width: 520px) {
+  .grid { grid-template-columns: 1fr; }
+  .resultado img { float: none; display: block; margin: 0 0 .75rem; }
+}
