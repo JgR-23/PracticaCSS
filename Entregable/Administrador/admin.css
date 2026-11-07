@@ -1,0 +1,149 @@
+:root {
+  --guinda: #6b1e3f;
+  --guinda-osc: #511530;
+  --fondo: #f4f1f3;
+  --texto: #2b2b2b;
+  --borde: #cfc6cb;
+  --error: #b3261e;
+  --ok: #1e7a46;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.5;
+}
+
+
+.titulo-admin {
+  background: var(--guinda);
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 1.25rem 1rem;
+  border-radius: 12px;
+}
+
+
+.panel-admin {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  min-height: 350px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+}
+
+.bienvenida {
+  color: var(--guinda);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+
+.seccion-alertas {
+  border: 1.5px solid var(--borde);
+  border-radius: 8px;
+  padding: 1.25rem;
+  height: 100%;
+  background: #fff;
+}
+
+.seccion-alertas h3 {
+  color: var(--guinda);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.descripcion {
+  color: #666;
+  font-size: .9rem;
+  margin-bottom: 1rem;
+}
+
+.lista-alertas { padding-left: 1.25rem; }
+
+.lista-alertas li {
+  margin-bottom: .75rem;
+  color: var(--texto);
+}
+
+.producto { font-weight: 600; }
+
+.cantidad {
+  display: block;
+  color: var(--error);
+  font-size: .85rem;
+}
+
+.ver-lista {
+  display: inline-block;
+  margin-top: .5rem;
+  color: var(--guinda);
+  font-weight: 600;
+  text-decoration: none;
+}
+.ver-lista:hover { text-decoration: underline; }
+
+
+.opciones-admin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  height: 100%;
+}
+
+.btn-opcion {
+  display: block;
+  width: 85%;
+  max-width: 260px;
+  padding: .75rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--guinda);
+  border: 2px solid var(--guinda);
+  border-radius: 8px;
+}
+
+.btn-opcion:hover {
+  background: var(--guinda-osc);
+  border-color: var(--guinda-osc);
+  color: #fff;
+}
+
+.btn-opcion:focus-visible {
+  outline: 3px solid rgba(107, 30, 63, .25);
+}
+
+
+@media (max-width: 767px) {
+  .container { padding-top: 25px !important; }
+
+  .titulo-admin { font-size: 1.4rem; }
+
+  .panel-admin { padding: 1rem; }
+
+  .bienvenida {
+    font-size: 1.35rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .seccion-alertas { padding: 1rem; }
+
+  .opciones-admin {
+    margin-top: .6rem;
+    gap: 1rem;
+  }
+
+  .btn-opcion { width: 100%; max-width: none; }
+}
