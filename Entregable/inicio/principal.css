@@ -1,0 +1,63 @@
+.navbar-ipn {
+    background-color: #6d0c2e;
+    padding: 15px;
+}
+
+.titulo-ipn {
+    color: #6d0c2e;
+}
+
+.btn-ipn {
+    background-color: #6d0c2e;
+    color: white;
+    border-color: #6d0c2e;
+}
+
+.btn-ipn:hover {
+    background-color: #52091f;
+    color: white;
+}
+
+.btn-outline-ipn {
+    background-color: #6d0c2e;
+    color: white;
+    border-color: #6d0c2e;
+}
+
+.btn-outline-ipn:hover {
+    background-color: #52091f;
+    color: white;
+}
+
+.carousel-item img {
+    height: 400px;
+    object-fit: contain;
+}
+
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+}
+
+h3{
+    color: black;
+}
+
+/* Botones anterior y siguiente */
+#carruselOfertas .carousel-control-prev-icon,
+#carruselOfertas .carousel-control-next-icon {
+    filter: invert(1) grayscale(100%);
+}
+
+/* Indicadores inferiores */
+#carruselOfertas .carousel-indicators button {
+    background-color: black;
+    opacity: 0.5;
+}
+
+/* Indicador de la imagen activa */
+#carruselOfertas .carousel-indicators .active {
+    background-color: black;
+    opacity: 1;
+}
+

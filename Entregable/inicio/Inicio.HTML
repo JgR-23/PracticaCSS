@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal | Control de Inventario IPN</title>
+    <link rel="icon" type="image/png" href="../img/Logopoli.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="principal.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-ipn" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="https://www.ipn.mx/" target="_blank">
+      <img src="../img/Logopoli.png" alt="IPN" width="45" height="45" class="d-inline-block align-text-top">
+    </a>
+    <a class="navbar-brand" href="https://www.escom.ipn.mx/" target="_blank">
+      <img src="../img/logoESCOM.png" alt="ESCOM" width="45" height="45" class="d-inline-block align-text-top">
+    </a>
+    <a>
+      <img src="../img/Equipo3.jpeg" alt="Equipo" width="45" height="45" class="d-inline-block align-text-top">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="Inicio.HTML">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../catalogo/catalogo.html">Catálogo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ingresar</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <div class="container my-5">
+
+    <div id="carruselOfertas" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carruselOfertas" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carruselOfertas" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carruselOfertas" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carruselOfertas" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../img/bata.jfif" class="d-block w-100" alt="Bata de laboratorio">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Bata de Laboratorio (-20%)<br>
+          $400.00</h3>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/chamarra.jfif" class="d-block w-100" alt="Chamarra">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Chamarra (-10%)
+          $1,260.00</h3>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/sudadera.jfif" class="d-block w-100" alt="Sudadera">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Sudadera (-15%)
+          $467.50</h3>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/taza.jfif" class="d-block w-100" alt="Taza">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Taza (-10%)
+          $198.00</h3>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carruselOfertas" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carruselOfertas" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+    <div class="text-center my-5">
+      <h2 class="titulo-ipn">¡Bienvenido al Sistema de Inventario IPN!</h2>
+      <p class="lead">Consulta nuestro catálogo de productos oficiales, revisa las existencias disponibles y descubre las últimas ofertas de la comunidad politécnica.</p>
+  </div>
+
+      <section class="mb-5">
+          <h2 class="text-center mb-4 titulo-ipn">Productos con Existencias Bajas</h2>
+          <div class="row g-4">
+              <div class="col-12 col-md-6 col-lg-4">
+                  <div class="card h-100">
+                      <img src="../img/gorra.jfif" class="card-img-top" alt="Gorra logo IPN">
+                      <div class="card-body">
+                          <h5 class="card-title">Gorra logo IPN</h5>
+                          <p class="card-text">Gorra casual con bordado del escudo del IPN en la parte frontal.</p>
+                          <div class="d-flex justify-content-between align-items-center">
+                              <span class="fw-bold fs-5">$160.00</span>
+                              <span class="badge text-bg-danger">¡Quedan 2 unidades!</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-md-6 col-lg-4">
+                  <div class="card h-100">
+                      <img src="../img/peluche.jfif" class="card-img-top" alt="Peluche Burrito Blanco">
+                      <div class="card-body">
+                          <h5 class="card-title">Peluche Burrito Blanco</h5>
+                          <p class="card-text">Peluche de la mascota oficial del IPN, elaborado con materiales suaves y vestimenta representativa.</p>
+                          <div class="d-flex justify-content-between align-items-center">
+                              <span class="fw-bold fs-5">$470.00</span>
+                              <span class="badge text-bg-danger">¡Quedan 3 unidades!</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-md-6 col-lg-4">
+                  <div class="card h-100">
+                      <img src="../img/termo.jfif" class="card-img-top" alt="Jersey Cheyennes ESIME">
+                      <div class="card-body">
+                          <h5 class="card-title">Termo grande, ESIME</h5>
+                          <p class="card-text">Un termo con la identidad de los Cheyennes, equipo representativo de ESIME.</p>
+                          <div class="d-flex justify-content-between align-items-center">
+                              <span class="fw-bold fs-5">$500.00</span>
+                              <span class="badge text-bg-danger">¡Queda 1 unidad!</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+    <div class="text-center my-5">
+      <a href="../catalogo/catalogo.html" class="btn btn-lg btn-ipn me-3" role="button">Ver Catálogo</a>
+      <button type="button" class="btn btn-lg btn-outline-ipn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ingresar</button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Bienvenido</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+              <form class="row g-3 needs-validation" novalidate>
+
+                <!-- Usuario -->
+                <div class="col-12">
+                  <label for="usuario" class="form-label">Usuario</label>
+                  <input type="text" class="form-control" id="usuario" minlength="3" required>
+                  <div class="invalid-feedback">
+                    El usuario debe tener mínimo 3 caracteres.
+                  </div>
+                </div>
+
+                <!-- Contraseña -->
+                <div class="col-12">
+                  <label for="password" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="password" minlength="8" required>
+                  <div class="invalid-feedback">
+                    La contraseña debe tener mínimo 8 caracteres.
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <button class="btn btn-ipn" type="submit">Ingresar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="inicio.js"></script>
+</body>
+</html>

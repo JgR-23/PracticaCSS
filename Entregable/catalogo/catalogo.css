@@ -4,8 +4,27 @@
 
   }
 
+  .btn-boton {
+    background-color: #6b1e3f;
+    color: white;
+    border: none;
+  }
+
+  .btn-boton:hover {
+    background-color: #511530;
+    border-color: #511530;
+    color: white;
+  }
+
+  .btn-boton:focus-visible {
+    outline: 3px solid rgba(107, 30, 63, .25);
+    outline-offset: 2px;
+  }
+
+  * { box-sizing: border-box; }
+
   h2{
-    background-color: #6d0c2e;
+    background-color: #6b1e3f;
     color: white;
     padding: 10px;
     border-radius: 10px; 
@@ -13,7 +32,40 @@
   }
 
   section h1{
-    color: #6d0c2e; 
+    color: #6b1e3f; 
     text-align: center; 
     padding: 15px;
   }
+
+  #boton {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  #boton .btn {
+    background-color: #6b1e3f;
+    color: white;
+    border: none;
+  }
+
+  #boton .btn a {
+    color: white;
+    text-decoration: none;
+  }
+
+  #boton .btn:hover {
+    background-color: #511530;
+    border-color: #511530;
+    color: #fff;
+  }
+
+#boton .btn:hover a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#boton .btn:focus-visible {
+    outline: 3px solid rgba(107, 30, 63, .25);
+    outline-offset: 2px;
+}
