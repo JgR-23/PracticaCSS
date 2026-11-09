@@ -47,7 +47,6 @@ body {
 .tarjeta h2 { margin-top: 0; color: var(--guinda); }
 .nota { color: #666; font-size: .9rem; margin-top: -.5rem; }
 
-/* ---------- Campos ---------- */
 .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1rem; }
 .campo { display: flex; flex-direction: column; margin-bottom: .6rem; min-width: 0; }
 .campo.ancho { grid-column: 1 / -1; }
@@ -89,7 +88,6 @@ input:focus, select:focus, textarea:focus {
   border: 1px solid var(--borde);
 }
 
-/* ---------- Mensajes ---------- */
 .resumen-errores {
   background: #fdecea;
   border: 1px solid var(--error);
@@ -115,7 +113,6 @@ input:focus, select:focus, textarea:focus {
   font-weight: 600;
 }
 
-/* ---------- Botones ---------- */
 .botones { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: .5rem; }
 button {
   font: inherit;
@@ -131,7 +128,6 @@ button {
 .btn-secundario { background: #fff; color: var(--guinda); }
 .btn-secundario:hover { background: #f6eef2; }
 
-/* ---------- Resultado en pantalla ---------- */
 .resultado {
   margin-top: 1.25rem;
   padding: 1rem;

@@ -1,13 +1,8 @@
 'use strict';
 
-/* =====================================================
-   Datos compartidos con el catálogo (localStorage)
-   - ipn_productos: [{ codigo, nombre, categoria, precio, existencia, descripcion, imagen }]
-   - ipn_ofertas:   [{ codigo, descuento, precioOriginal, precioOferta, fecha }]
-   ===================================================== */
 const KEY_PRODUCTOS = 'ipn_productos';
 const KEY_OFERTAS = 'ipn_ofertas';
-const MAX_IMAGEN_BYTES = 2 * 1024 * 1024; // 2 MB
+const MAX_IMAGEN_BYTES = 2 * 1024 * 1024;
 const TIPOS_IMAGEN = ['image/jpeg', 'image/png', 'image/webp'];
 const moneda = new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN' });
 
@@ -23,12 +18,7 @@ function guardar(clave, datos) {
   catch { return false; }
 }
 
-/* =====================================================
-   Reglas de validación (una por campo, según su "name")
-   Cada regla devuelve '' si es válido o el mensaje de error.
-   ===================================================== */
 const reglas = {
-  // --- Formulario de producto ---
   codigo(v) {
     if (!v) return 'El código es obligatorio.';
     if (!/^[A-Za-z0-9-]{3,12}$/.test(v)) {
@@ -78,7 +68,6 @@ const reglas = {
     return '';
   },
 
-  // --- Formulario de oferta ---
   producto(v) {
     if (leer(KEY_PRODUCTOS).length === 0) return 'Primero registra un producto en el formulario 1.';
     return v ? '' : 'Selecciona un producto.';
@@ -93,9 +82,6 @@ const reglas = {
   },
 };
 
-/* =====================================================
-   Funciones de apoyo para validar y mostrar errores
-   ===================================================== */
 function mostrarError(campo, mensaje) {
   $(`${campo.id}-error`).textContent = mensaje;
   campo.classList.toggle('invalido', mensaje !== '');
@@ -122,7 +108,6 @@ function validar(campo) {
   return mensaje === '';
 }
 
-// Valida al salir del campo y, una vez "tocado", en cada cambio.
 function conectar(campos) {
   campos.forEach((campo) => {
     const alCambiar = campo.tagName === 'SELECT' || campo.type === 'file';
@@ -173,7 +158,6 @@ function mostrarResultado(contenedor, titulo, imagen, nombreProducto, filas) {
   contenedor.hidden = false;
 }
 
-/* Reduce la imagen (máx. 600 px, JPEG) para que quepa en localStorage */
 function comprimirImagen(archivo, ladoMax = 600) {
   return new Promise((resolve, reject) => {
     const url = URL.createObjectURL(archivo);
@@ -198,9 +182,7 @@ function comprimirImagen(archivo, ladoMax = 600) {
   });
 }
 
-/* =====================================================
-   FORMULARIO 1: AGREGAR PRODUCTO
-   ===================================================== */
+
 const formProducto = $('form-producto');
 const camposProducto = ['codigo', 'nombre', 'categoria', 'precio', 'existencia', 'descripcion', 'imagen'].map($);
 const descripcion = $('descripcion');
@@ -221,7 +203,6 @@ function limpiarVistaPrevia() {
   vistaPrevia.hidden = true;
 }
 
-// Se registra después de conectar(), así corre cuando el campo ya fue validado.
 $('imagen').addEventListener('change', (e) => {
   limpiarVistaPrevia();
   const archivo = e.target.files[0];
@@ -294,9 +275,7 @@ formProducto.addEventListener('reset', () => {
   }, 0);
 });
 
-/* =====================================================
-   FORMULARIO 2: AGREGAR OFERTA
-   ===================================================== */
+
 const formOferta = $('form-oferta');
 const selProducto = $('oferta-producto');
 const inpDescuento = $('oferta-descuento');
@@ -362,7 +341,6 @@ formOferta.addEventListener('submit', (e) => {
     fecha: new Date().toISOString(),
   };
 
-  // Un producto solo puede tener una oferta: si ya existe, se reemplaza.
   const ofertas = leer(KEY_OFERTAS);
   const posicion = ofertas.findIndex((o) => o.codigo === producto.codigo);
   const reemplazada = posicion >= 0;
@@ -399,5 +377,4 @@ formOferta.addEventListener('reset', () => {
   }, 0);
 });
 
-/* ---------- Inicio ---------- */
 llenarSelectProductos();
