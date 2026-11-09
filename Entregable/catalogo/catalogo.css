@@ -1,71 +1,79 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(to bottom, #6d0c2e 0%, #f8f9fa 25%, #f8f9fa 75%, #6d0c2e 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
 
-  .card-img-top {
-    height: 350px;
+.card-img-top {
+  height: 350px;
+  object-fit: cover; /* Mantiene la proporción correcta de las imágenes del catálogo */
+}
 
-  }
+.btn-boton {
+  background-color: #6d0c2e;
+  color: white;
+  border: none;
+}
 
-  .btn-boton {
-    background-color: #6b1e3f;
-    color: white;
-    border: none;
-  }
+.btn-boton:hover {
+  background-color: #52091f;
+  border-color: #52091f;
+  color: white;
+}
 
-  .btn-boton:hover {
-    background-color: #511530;
-    border-color: #511530;
-    color: white;
-  }
+.btn-boton:focus-visible {
+  outline: 3px solid rgba(109, 12, 46, .25);
+  outline-offset: 2px;
+}
 
-  .btn-boton:focus-visible {
-    outline: 3px solid rgba(107, 30, 63, .25);
-    outline-offset: 2px;
-  }
+* { box-sizing: border-box; }
 
-  * { box-sizing: border-box; }
+h2 {
+  background-color: #6d0c2e;
+  color: white;
+  padding: 10px;
+  border-radius: 10px; 
+  text-align: center;
+}
 
-  h2{
-    background-color: #6b1e3f;
-    color: white;
-    padding: 10px;
-    border-radius: 10px; 
-    text-align: center;
-  }
+section h1 {
+  color: #6d0c2e; 
+  text-align: center; 
+  padding: 15px;
+}
 
-  section h1{
-    color: #6b1e3f; 
-    text-align: center; 
-    padding: 15px;
-  }
+#boton {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
 
-  #boton {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-  }
+#boton .btn {
+  background-color: #6d0c2e;
+  color: white;
+  border: none;
+}
 
-  #boton .btn {
-    background-color: #6b1e3f;
-    color: white;
-    border: none;
-  }
+#boton .btn a {
+  color: white;
+  text-decoration: none;
+}
 
-  #boton .btn a {
-    color: white;
-    text-decoration: none;
-  }
-
-  #boton .btn:hover {
-    background-color: #511530;
-    border-color: #511530;
-    color: #fff;
-  }
+#boton .btn:hover {
+  background-color: #52091f;
+  border-color: #52091f;
+  color: #fff;
+}
 
 #boton .btn:hover a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 #boton .btn:focus-visible {
-    outline: 3px solid rgba(107, 30, 63, .25);
-    outline-offset: 2px;
+  outline: 3px solid rgba(109, 12, 46, .25);
+  outline-offset: 2px;
 }

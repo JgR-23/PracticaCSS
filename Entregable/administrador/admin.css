@@ -1,6 +1,6 @@
 :root {
-  --guinda: #6b1e3f;
-  --guinda-osc: #511530;
+  --guinda: #6d0c2e;
+  --guinda-osc: #52091f;
   --fondo: #f4f1f3;
   --texto: #2b2b2b;
   --borde: #cfc6cb;
@@ -14,11 +14,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  background: var(--fondo);
+  background: linear-gradient(to bottom, #6d0c2e 0%, #f8f9fa 25%, #f8f9fa 75%, #6d0c2e 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
   color: var(--texto);
   line-height: 1.5;
 }
-
 
 .titulo-admin {
   background: var(--guinda);
@@ -28,7 +29,6 @@ body {
   padding: 1.25rem 1rem;
   border-radius: 12px;
 }
-
 
 .panel-admin {
   background: #fff;
@@ -44,7 +44,6 @@ body {
   font-weight: bold;
   margin-bottom: 1.5rem;
 }
-
 
 .seccion-alertas {
   border: 1.5px solid var(--borde);
@@ -90,7 +89,6 @@ body {
 }
 .ver-lista:hover { text-decoration: underline; }
 
-
 .opciones-admin {
   display: flex;
   flex-direction: column;
@@ -122,9 +120,8 @@ body {
 }
 
 .btn-opcion:focus-visible {
-  outline: 3px solid rgba(107, 30, 63, .25);
+  outline: 3px solid rgba(109, 12, 46, .25);
 }
-
 
 @media (max-width: 767px) {
   .container { padding-top: 25px !important; }
