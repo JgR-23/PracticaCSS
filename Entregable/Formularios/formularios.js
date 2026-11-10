@@ -3,7 +3,7 @@
 const KEY_PRODUCTOS = 'ipn_productos';
 const KEY_OFERTAS = 'ipn_ofertas';
 const MAX_IMAGEN_BYTES = 2 * 1024 * 1024;
-const TIPOS_IMAGEN = ['image/jpeg', 'image/png', 'image/webp'];
+const TIPOS_IMAGEN = ['image/jpeg', 'image/png'];
 const moneda = new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN' });
 
 const $ = (id) => document.getElementById(id);
